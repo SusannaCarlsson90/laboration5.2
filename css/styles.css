@@ -248,7 +248,8 @@ h1 {
     height: 75vh; /* 75% av skärmen */
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 0;
+    border-radius: 10px;
+
   }
 
   .intro-text {
@@ -299,4 +300,20 @@ h1 {
 .sidebar-item figcaption .btn {
   width: 100%;
   max-width: 220px;
+}
+
+.page-index .tiles { align-self: start; }
+
+/* Bara startsidan – håll lika högt inom raden */
+.page-index .tiles > .col { display: flex; }
+.page-index .tiles .card { display: flex; flex-direction: column; }
+.page-index .tiles .card-body { display: flex; flex-direction: column; }
+
+/* Knappen längst ned, samma linje */
+.page-index .tiles .card-body .btn,
+.page-index .tiles .card-body a.btn {
+  margin-top: auto;    /* tryck ner till botten */
+  align-self: center;  /* centrera (ändra till flex-start om du vill vänsterställa) */
+  width: 100%;
+  max-width: 220px;    /* valfritt */
 }
