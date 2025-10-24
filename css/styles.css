@@ -1,6 +1,4 @@
-/* BASLÄGE (Desktop-lik layout)
-    */
-
+/* BASLÄGE (Desktop) */
 .layout {
   display: grid;
   grid-template-areas:
@@ -9,9 +7,6 @@
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
-
-
-
 
 body {
   display: grid;
@@ -24,38 +19,18 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 
-header {
-  grid-area: header;
-}
+header { grid-area: header; background-color: #FFE9D6; }
+main.layout { grid-area: main; }
+.tiles { grid-area: tiles; }
+footer { grid-area: footer; }
+.intro { grid-area: intro; }
+.sidebar { grid-area: sidebar; }
 
-main.layout {
-  grid-area: main;
-}
-
-.tiles {
-  grid-area: tiles;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.intro {
-  grid-area: intro;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-/* ---- Introsektionen ---- */
-/* Gör bild och text lika höga och bredvid varandra */
-
+/* Intro – bild + text bredvid varann */
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  /* centrera texten vertikalt */
+  align-items: center; /* centrera vertikalt */
   gap: 20px;
 }
 
@@ -71,8 +46,9 @@ footer {
   object-position: center 20%;
   border-radius: 10px;
   display: block;
-  gap: 20px;
-  padding top: 20px;
+  /* FIX: stavning */
+  /* padding-top om du vill ha luft */
+  /* padding-top: 20px; */
   margin: 20px;
 }
 
@@ -85,25 +61,20 @@ footer {
   padding: 20px;
 }
 
-.intro-text h2 {
-  font-weight: normal;
-}
+.intro-text h2 { font-weight: normal; }
 
-/* ---- Sidebar ---- */
-
+/* Sidebar */
 .sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* centrera innehållet */
-  gap: 1rem;
-  /* mellanrum mellan blocken */
+  align-items: stretch;
+  gap: 1rem;  /* mellanrum */
   padding: 15px;
   margin: 10px;
 }
 
 .sidebar-item {
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: 0;
 }
@@ -114,9 +85,7 @@ footer {
   object-fit: cover;
   border-radius: 10px;
   display: block;
-  gap: 20px;
-  padding top: 20px;
-  margin: 20px;
+  margin: 0; 
 }
 
 .sidebar-item figcaption {
@@ -129,28 +98,35 @@ footer {
   font-size: 14px;
 }
 
-/* ---- Kort (startsidan) ---- */
-/*gör mina foton lika stora i raden på startsidan*/
+/* Kort (startsidan) – gör bilder kvadratiska */
 .card-img-top {
-  aspect-ratio: 1/1;
-  /*förhållande mellan bredd och höjd*/
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   width: 100%;
   display: block;
 }
 
+
+/* gör kolumnerna flex så kortet kan växa lika högt */
+.tiles > .col { display: flex; }
+/* gör själva kortet flex, så knappen kan hamna i botten */
+.tiles .card { display: flex; flex-direction: column; flex: 1 1 auto; }
+/* se till att card-body fyller upp och knappen trycks ned */
+.tiles .card-body { display: flex; flex-direction: column; }
+.tiles .card-body .btn,
+.tiles .card-body a.btn { margin-top: auto; }
+
+/* Knappar */
 .btn-outline-secondary {
   border-color: #4C3A36;
   color: #4C3A36;
 }
-
 .btn-outline-secondary:hover {
   background-color: #4C3A36;
   color: #FFE9D6;
 }
 
-/* ---- Rubriker ---- */
-
+/* Rubriker */
 h1 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   text-align: center;
@@ -161,62 +137,92 @@ h1 {
   font-weight: normal;
 }
 
-header {
-  background-color: #FFE9D6;
-}
-
 /* ===========================
    TABLET (768px–1199px)
    =========================== */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .layout {
-    display: grid;
-    grid-template-areas:
-      "intro sidebar"
-      "tiles sidebar";
-    gap: 20px;
-    max-width: 1100px;
-    /* 🔹 lite luft på sidorna */
-    margin: 0 auto;
+
+   @media (min-width: 768px) and (max-width: 1199px) {
+
+    /* Ge mer plats åt innehållet än sidokolumnen */
+    .layout {
+      display: grid;
+      grid-template-areas:
+        "intro sidebar"
+        "tiles sidebar";
+      grid-template-columns: 3fr 2fr; /* var 1:1, nu 60/40 */
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  
+    /* Intro: gör textkolumnen lite bredare än bilden och minska rubriker */
+    .intro {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr; /* text : bild */
+      align-items: center;
+      gap: 24px;
+    }
+  
+    .intro img {
+      width: 100%;
+      height: 700px;        /* fast höjd*/
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 10px;
+      margin: 0;            /* ta bort stora marginaler */
+    }
+  
+    .intro-text {
+      max-width: 42ch;      /* bekväm radlängd = snygga rader */
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0;           /* behåll luften via gap istället */
+    }
+  
+    .intro-text h2 {
+      font-size: clamp(22px, 3.2vw, 30px);
+      line-height: 1.2;
+      margin: 0 0 12px;
+      word-break: normal;
+      hyphens: auto;
+    }
+  
+    /* Sidebar: mindre luft, jämna kort, centrera knappar */
+    .sidebar {
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      align-items: stretch;
+    }
+  
+    .sidebar-item {
+      width: 100%;
+      margin: 0;
+    }
+  
+    .sidebar-item img {
+      width: 100%;
+     height: 70%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 0;           /* ta bort 20px-marginalerna som “puttar” allt */
+    }
+  
+    .sidebar-item figcaption {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    /* Tiles: lite mindre gap på tablet */
+    .tiles { align-items: stretch; }
+    .tiles > .col { display: flex; }
+    .tiles .card { display: flex; flex-direction: column; flex: 1 1 auto; }
+    .tiles .card-body { display: flex; flex-direction: column; }
+    .tiles .card-body .btn, .tiles .card-body a.btn { margin-top: auto; }
   }
-
-  /* Intro */
-  .intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .intro img {
-    width: 100%;
-    height: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 10px;
-  }
-
-  .intro-text {
-    text-align: left;
-    font-size: 1rem;
-
-    max-width: 80%;
-
-    margin: 0 auto;
-  }
-
-  .intro-text h2 {
-    text-align: left;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .tiles {
-    align-items: center;
-  }
-}
+  
 
 /* ===========================
    MOBIL (<768px)
@@ -225,10 +231,8 @@ header {
   .layout {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* centrera allt horisontellt */
-    text-align: center;
-    /* centrera text i alla sektioner */
+    align-items: center; /* centrera horisontellt */
+    text-align: center;  /* centrera text */
     padding: 10px;
   }
 
@@ -241,8 +245,7 @@ header {
 
   .intro img {
     width: 100%;
-    height: 75vh;
-    /* 75% av skärmen */
+    height: 75vh; /* 75% av skärmen */
     object-fit: cover;
     object-position: center 20%;
     border-radius: 0;
@@ -254,19 +257,46 @@ header {
     margin: 20px auto;
   }
 
-  .tiles img {
-    border-radius: 20%;
-  }
+  .tiles img { border-radius: 20%; }
 }
 
 /* ===========================
    OM OSS
    =========================== */
-h2 {
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  color: #4C3A36;
-  font-size: 50px;
-  font-weight: normal;
+.om .layout {
+  display: block;
+  h2 {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    color: #4C3A36;
+    font-size: 50px;
+    font-weight: normal;
+  }
+}
+  
+
+/* ===========================
+   Vi som kämpar
+   =========================== */
+.page-undersida .layout {
+  display: block;
+  gap:0;
+}
+
+   /* ===========================
+  Lyckliga historier
+   =========================== */
+
+
+.sidebar-item figcaption {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center; /* centrerar innehållet horisontellt */
+  width: 100%;
+}
+
+.sidebar-item figcaption .btn {
+  width: 100%;
+  max-width: 220px;
 }
