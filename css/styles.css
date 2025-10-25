@@ -54,9 +54,6 @@ footer { grid-area: footer; }
   object-position: center 20%;
   border-radius: 10px;
   display: block;
-  /* FIX: stavning */
-  /* padding-top om du vill ha luft */
-  /* padding-top: 20px; */
   margin: 20px;
 }
 
@@ -141,6 +138,16 @@ h1 {
   margin: 10px;
   padding: 20px;
   color: #4C3A36;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  color: #4C3A36;
   font-size: 50px;
   font-weight: normal;
 }
@@ -166,14 +173,17 @@ h1 {
     /* Intro: gör textkolumnen lite bredare än bilden och minska rubriker */
     .intro {
       display: grid;
-      grid-template-columns: 1.2fr 1fr; /* text : bild */
-      align-items: center;
+      grid-template-columns: .intro {
+        grid-template-columns: 1fr 1.2fr; /* bilden smalare, texten lite bredare */
+      }
+      align-items: stretch;
       gap: 24px;
     }
   
     .intro img {
       width: 100%;
-      height: 700px;        /* fast höjd*/
+      height: 100%;
+      min-height: 420px;        
       object-fit: cover;
       object-position: center 20%;
       border-radius: 10px;
@@ -181,7 +191,8 @@ h1 {
     }
   
     .intro-text {
-      max-width: 42ch;      /* bekväm radlängd = snygga rader */
+      max-width: none;    
+      text-align: left;  
       margin: 0;
       font-size: 1rem;
       line-height: 1.5;
@@ -211,7 +222,7 @@ h1 {
   
     .sidebar-item img {
       width: 100%;
-     height: 70%;
+     height: auto;
       object-fit: cover;
       border-radius: 10px;
       margin: 0;           /* ta bort 20px-marginalerna som “puttar” allt */
@@ -273,7 +284,7 @@ h1 {
    OM OSS
    =========================== */
 .om .layout {
-  display: block;
+  display: flex;
   h2 {
     text-align: center;
     margin: 10px;
@@ -283,7 +294,18 @@ h1 {
     font-weight: normal;
   }
 }
-  
+.about {
+  text-align: center; /* centrera innehåll horisontellt */
+  margin: 10%;
+}
+
+.about img {
+  width: 50%;
+  height: auto;       /* låt höjden anpassas */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px; /* lite luft under bilden */
+}
 
 /* ===========================
    Vi som kämpar
@@ -325,3 +347,4 @@ h1 {
   width: 100%;
   max-width: 220px;    /* valfritt */
 }
+
