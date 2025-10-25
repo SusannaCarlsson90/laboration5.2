@@ -151,6 +151,13 @@ h2 {
   font-size: 50px;
   font-weight: normal;
 }
+.footertext {
+  position: absolute;
+  line-height: 100px;
+  /*för att få i mitten samma höjd som blocket den ligger i*/
+  left: 10px;
+  /*Skjuter in lite från kanten*/
+}
 
 /* ===========================
    TABLET (768px–1199px)
