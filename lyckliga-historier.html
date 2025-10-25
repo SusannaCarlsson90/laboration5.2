@@ -12,25 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-    <script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
-
 <body class="page-undersida">
-  <!--Header-->
+
+  <!-- Header -->
   <header>
-    <!--Navbar från bootstrap-->
-
-    <!--Hamburgermeny på telefon vanlig på platta och datorskärm-->
+    <!-- Navbar från Bootstrap -->
     <nav class="navbar navbar-expand-md bg-body-tertiary">
-
-
       <div class="container-fluid">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link" href="index.html">Startsida</a>
@@ -38,74 +35,75 @@
             <a class="nav-link" href="#">Bloggar</a>
             <a class="nav-link" href="om.html">Om</a>
             <a class="nav-link" href="#">Kontakt</a>
-
-
           </div>
         </div>
       </div>
     </nav>
-    <h1>Regnbågsbarn</h1> 
 
+    <h1 class="text-center">Regnbågsbarn</h1>
   </header>
-  <main class="container layout pt-4 pt-md-5">
-    <!--Skapar luft på toppen i mobil och tablet/desktop döper min egen till layout för att undvika krock med bootstrap-->
 
-    <h2>Lyckliga historier</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 tiles"> <!--Tiles i slutet kan jag referera till i css-->
+  <!-- Main med bakgrundsfärg -->
+  <main class="container-fluid py-4 main-band">
+    <div class="container layout pt-0 pt-md-1">
 
+      <h2 class="text-center">Lyckliga historier</h2>
 
-      <!-- Kort 1 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/nicolycklig.jpg" class="card-img-top" alt="regnbåge">
-          <div class="card-body">
-            <h5 class="card-title">Nico</h5>
-            <p class="card-text">Efter 1 1/2 år kom Nico</p>
-            <button class="btn btn-outline-secondary">Läs mer</button>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 tiles">
+
+        <!-- Kort 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/nicolycklig.jpg" class="card-img-top" alt="regnbåge">
+            <div class="card-body">
+              <h5 class="card-title">Nico</h5>
+              <p class="card-text">Efter 1 1/2 år kom Nico</p>
+              <button class="btn btn-outline-secondary">Läs mer</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Kort 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/baby1.jpg" class="card-img-top" alt="Nico glad">
-          <div class="card-body">
-            <h5 class="card-title">Matheo</h5>
-            <p class="card-text">Matheo kom efter hjälp i Danmark</p>
-            <a href="lyckliga-historier.html" class="btn btn-outline-secondary">Läs mer</a>
+        <!-- Kort 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/baby1.jpg" class="card-img-top" alt="Nico glad">
+            <div class="card-body">
+              <h5 class="card-title">Matheo</h5>
+              <p class="card-text">Matheo kom efter hjälp i Danmark</p>
+              <a href="lyckliga-historier.html" class="btn btn-outline-secondary">Läs mer</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Kort 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/baby2.jpg" class="card-img-top" alt="diskussion">
-          <div class="card-body">
-            <h5 class="card-title">Zowi</h5>
-            <p class="card-text">Zowi skulle aldrig överleva utanför magen</p>
-            <button class="btn btn-outline-secondary">Läs mer</button>
+        <!-- Kort 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/baby2.jpg" class="card-img-top" alt="diskussion">
+            <div class="card-body">
+              <h5 class="card-title">Zowi</h5>
+              <p class="card-text">Zowi skulle aldrig överleva utanför magen</p>
+              <button class="btn btn-outline-secondary">Läs mer</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Kort 4 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/baby3.jpg" class="card-img-top" alt="himmel">
-          <div class="card-body">
-            <h5 class="card-title">Milo</h5>
-            <p class="card-text">Efter tio oförklarliga missfall kom Milo.</p>
-            <a href="vi-som-kampar.html" class="btn btn-outline-secondary">Läs mer</a>
+        <!-- Kort 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/baby3.jpg" class="card-img-top" alt="himmel">
+            <div class="card-body">
+              <h5 class="card-title">Milo</h5>
+              <p class="card-text">Efter tio oförklarliga missfall kom Milo.</p>
+              <a href="vi-som-kampar.html" class="btn btn-outline-secondary">Läs mer</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-
+      </div> <!-- /row -->
+    </div> <!-- /container -->
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footertext">
       &copy; Webbutveckling 1 – DT057G •
@@ -114,8 +112,7 @@
       <a href="mailto:suca2500@student.miun.se">suca2500@student.miun.se</a>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>

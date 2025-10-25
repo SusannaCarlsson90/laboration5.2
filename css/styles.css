@@ -10,7 +10,7 @@
 }
 
 .container.layout.pt-4.pt-md-5 {
-  background-color: #FFFDF8;   
+  background-color: #FFF9F3 ;   
  
 }
 
@@ -26,8 +26,16 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 
+#navbarNavAltMarkup {
+  background-color: #EBC7A8; /* lite varmare nyans än headern */
+  
+}
+
+
+.main-band { background-color: #FFE7D1; }
+
 header { grid-area: header; 
-  background-color: #FFF7E0; }
+  background-color: #E6CBB8; }
 main.layout { grid-area: main; }
 .tiles { grid-area: tiles; }
 footer { grid-area: footer; }
@@ -76,6 +84,7 @@ footer { grid-area: footer; }
   gap: 1rem;  /* mellanrum */
   padding: 15px;
   margin: 10px;
+  background-color: #FFF1E6
 }
 
 .sidebar-item {
@@ -104,7 +113,8 @@ footer { grid-area: footer; }
 }
 
 .btn.btn-outline-secondary {
-  background-color: #FFE9D6;
+  background-color: #D1A68D ;
+  color: #FFFDF8;
 }
 
 /* Kort (startsidan) – gör bilder kvadratiska */
@@ -359,3 +369,5 @@ h2 {
   max-width: 220px;    /* valfritt */
 }
 
+
+header .nav-link.active{ text-decoration: underline; }
