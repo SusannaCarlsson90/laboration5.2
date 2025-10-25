@@ -95,12 +95,16 @@ footer { grid-area: footer; }
 
 .sidebar-item figcaption {
   margin-top: 8px;
-  background-color: #EFD8C5;
+ 
   border-radius: 8px;
   padding: 4px 8px;
   font-family: "Playfair Display", Georgia, serif;
   color: #4C3A36;
   font-size: 14px;
+}
+
+.btn.btn-outline-secondary {
+  background-color: #FFE9D6;
 }
 
 /* Kort (startsidan) – gör bilder kvadratiska */
