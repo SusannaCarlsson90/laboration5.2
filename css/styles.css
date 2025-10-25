@@ -1,4 +1,5 @@
 /* BASLÄGE (Desktop) */
+
 .layout {
   display: grid;
   grid-template-areas:
@@ -7,6 +8,12 @@
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
+
+.container.layout.pt-4.pt-md-5 {
+  background-color: #FFFDF8;   
+ 
+}
+
 
 body {
   display: grid;
@@ -19,7 +26,8 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 
-header { grid-area: header; background-color: #FFE9D6; }
+header { grid-area: header; 
+  background-color: #FFF7E0; }
 main.layout { grid-area: main; }
 .tiles { grid-area: tiles; }
 footer { grid-area: footer; }
