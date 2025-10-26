@@ -14,6 +14,26 @@
  
 }
 
+.logo {
+  height: 60px;      /* lagom storlek */
+  width: auto;
+  margin-left: 20px;
+  border-radius: 10px; /* rundade hörn om du vill */
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar.bg-body-tertiary {
+  background-color: #E6CBB8 !important;
+}
 
 body {
   display: grid;
@@ -26,13 +46,18 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 
-#navbarNavAltMarkup {
-  background-color: #EBC7A8; /* lite varmare nyans än headern */
-  
+
+nav.navbar {
+  background-color: #E6CBB8;  /* samma ton på båda */
+  border: none;
+  box-shadow: none;
 }
 
+#navbarNavAltMarkup {
+  background-color: transparent; /* gör så att bara nav styr färgen */
+}
 
-.main-band { background-color: #FFE7D1; }
+.main-band { background-color:#FDE0C3; }
 
 header { grid-area: header; 
   background-color: #E6CBB8; }
@@ -166,12 +191,13 @@ h2 {
   font-weight: normal;
 }
 .footertext {
-  position: absolute;
-  line-height: 100px;
-  /*för att få i mitten samma höjd som blocket den ligger i*/
-  left: 10px;
-  /*Skjuter in lite från kanten*/
+  position: static; 
+  line-height: normal;
+  margin: 0 auto;
+  text-align: center;
 }
+
+
 
 /* ===========================
    TABLET (768px–1199px)
@@ -371,3 +397,19 @@ h2 {
 
 
 header .nav-link.active{ text-decoration: underline; }
+
+footer {
+  background-color: #D9B89E;   /* varm, lite mörkare beige */
+  color: #4C3A36;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #4C3A36;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FFFDF8;}
