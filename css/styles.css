@@ -9,6 +9,24 @@
   gap: 20px;
 }
 
+.contact {
+  background-color: #FFF1E6;
+  border-radius: 12px;
+  padding: 40px;
+  color: #4C3A36;
+  font-family: "Playfair Display", serif;
+}
+
+.contact a {
+  color: #4C3A36;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: #D1A68D;
+}
+
+
 .container.layout.pt-4.pt-md-5 {
   background-color: #FFF9F3 ;   
  
