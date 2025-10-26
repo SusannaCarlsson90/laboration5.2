@@ -16,12 +16,10 @@
 </head>
 
 
-<body class="page-undersida">
+<body class="om">
   <!--Header-->
   <header>
     <!--Navbar från bootstrap-->
-
-    <!--Hamburgermeny på telefon vanlig på platta och datorskärm-->
     <nav class="navbar navbar-expand-md bg-body-tertiary">
       <div class="container-fluid">
     
@@ -31,22 +29,20 @@
           <span class="navbar-toggler-icon"></span>
         </button>
     
-        <!-- Menylänkarna -->
+        <!-- Menylänkar -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html">Startsida</a>
+            <a class="nav-link" href="index.html">Startsida</a>
             <a class="nav-link" href="#">Berättelser</a>
             <a class="nav-link" href="#">Bloggar</a>
             <a class="nav-link" href="om.html">Om</a>
-            <a class="nav-link" href="kontakt.html">Kontakt</a>
+            <a class="nav-link active" aria-current="page"  href="kontakt.html">Kontakt</a>
           </div>
         </div>
-
         <form class="d-flex me-3" role="search">
           <input class="form-control form-control-sm" type="search" placeholder="Sök..." aria-label="Sök">
           <button class="btn btn-outline-secondary btn-sm ms-2" type="submit">Sök</button>
         </form>
-    
         <!-- 🔹 Logga längst till höger -->
         <a href="index.html" class="navbar-brand ms-auto">
           <img src="images/flowerlogo.jpg" alt="Regnbågsbarn logga" class="logo">
@@ -55,64 +51,37 @@
       </div>
     </nav>
     
-    <h1>Regnbågsbarn</h1> <!--Centrerar rubriken inne i headern-->
+    
+
+    <h1>Regnbågsbarn</h1> 
 
   </header>
   <main class="container-fluid py-4 main-band">
     <div class="container layout pt-0 pt-md-1">
     <!--Skapar luft på toppen i mobil och tablet/desktop döper min egen till layout för att undvika krock med bootstrap-->
-    <h2>Vi som kämpar</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 tiles"> <!--Tiles i slutet kan jag referera till i css-->
+
+    <section class="about">
+      <h2>Kontakta oss</h2>
+      
+
+      <div class="intro-text">
+       
 
 
-      <!-- Kort 1 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/rainbow2.jpg" class="card-img-top" alt="regnbågsfluff">
-          <div class="card-body">
-            <h5 class="card-title">Ofrivillig barnlöshet</h5>
-            <p class="card-text">Fem år av ofrivillig barnlöshet, utan några barn</p>
-            <button class="btn btn-outline-secondary">Läs mer</button>
-          </div>
-        </div>
+        Regnbågsbarn grundades 2025 av mig Susanna Carlsson. Min och min mans väg till ett barn har varit lång och
+        krokig. Efter 1 1/2 år kom äntligen vår lille Nico till världen. Detta skedde efter att vi efter 12 månader
+        sökte vård och fick utskrivet tabletter för att stimulera ägglossning. Efter detta blev jag gravid med Nico
+        efter bara 3 månader.<p>När det sedan blev dags för ett syskon trodde vi båda att det skulle gå snabbt och
+          enkelt med ett syskon nu när vi hade tabletterna, ack så fel vi hade</p>
+        <p>På 12 månader lyckades vi bli gravida fyra gånger, samtliga slutade i missfall. Vården gjorde efter tre
+          missfall en utredning men hittade ingenting</p>
+        <p>Om det är något jag lärt mig på vår resa så är det att det finns en stor lucka kring människor som går igenom
+          missfall. Både gällande känslomässigt stöd men även hjälp från vården</p>
+        <p>Media kryllar av historier där samtliga slutar lyckligt. Denna sida startade jag därför att jag ville skapa
+          en mötesplats till alla oss som har kämpat eller som fortfarande kämpar.</p>
       </div>
 
-      <!-- Kort 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/fog.jpg" class="card-img-top" alt="Himmel">
-          <div class="card-body">
-            <h5 class="card-title">Upprepade missfall</h5>
-            <p class="card-text">Karin har fått åtta missfall och har ännu inga barn.</p>
-            <button class="btn btn-outline-secondary">Läs mer</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kort 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/candle.jpg" class="card-img-top" alt="ljus">
-          <div class="card-body">
-            <h5 class="card-title">PCOS</h5>
-            <p class="card-text">Inga behandlingar hjälper</p>
-            <button class="btn btn-outline-secondary">Läs mer</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Kort 4 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="images/sky.jpg" class="card-img-top" alt="himmel">
-          <div class="card-body">
-            <h5 class="card-title">"Inga fel"</h5>
-            <p class="card-text">Läkarna upprepar att allt ser bra ut och ingenting är fel, men ändå får vi inget barn.</p>
-            <a href="vi-som-kampar.html" class="btn btn-outline-secondary">Läs mer</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
 
 </div>
   </main>
