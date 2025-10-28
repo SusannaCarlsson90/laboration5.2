@@ -14,7 +14,7 @@
   border-radius: 12px;
   padding: 40px;
   color: #4C3A36;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif serif;
 }
 
 .contact a {
@@ -50,7 +50,7 @@
 }
 
 .navbar.bg-body-tertiary {
-  background-color: #E6CBB8 !important;
+  background-color: #E6CBB8 !important; /*skriv över om andra regler finns*/
 }
 
 body {
@@ -229,7 +229,7 @@ h2 {
       grid-template-areas:
         "intro sidebar"
         "tiles sidebar";
-      grid-template-columns: 3fr 2fr; /* var 1:1, nu 60/40 */
+      grid-template-columns: 3fr 2fr; /*  60/40 */
       gap: 24px;
       max-width: 1100px;
       margin: 0 auto;
@@ -238,9 +238,7 @@ h2 {
     /* Intro: gör textkolumnen lite bredare än bilden och minska rubriker */
     .intro {
       display: grid;
-      grid-template-columns: .intro {
-        grid-template-columns: 1fr 1.2fr; /* bilden smalare, texten lite bredare */
-      }
+      grid-template-columns: 1fr 1.2fr; /* bilden smalare, texten lite bredare */
       align-items: stretch;
       gap: 24px;
     }
@@ -248,7 +246,7 @@ h2 {
     .intro img {
       width: 100%;
       height: 100%;
-      min-height: 420px;        
+      min-height: 400px;        
       object-fit: cover;
       object-position: center 20%;
       border-radius: 10px;
@@ -265,11 +263,11 @@ h2 {
     }
   
     .intro-text h2 {
-      font-size: clamp(22px, 3.2vw, 30px);
-      line-height: 1.2;
+      font-size: clamp(22px, 3.2vw, 30px); /*gör textstorlekn responsiv utan media queries*/
+      line-height: 1.2; 
       margin: 0 0 12px;
       word-break: normal;
-      hyphens: auto;
+      hyphens: auto; /*tillåter automatisk orddelning med bindestreck*/
     }
   
     /* Sidebar: mindre luft, jämna kort, centrera knappar */
@@ -290,7 +288,7 @@ h2 {
      height: auto;
       object-fit: cover;
       border-radius: 10px;
-      margin: 0;           /* ta bort 20px-marginalerna som “puttar” allt */
+      margin: 0;           
     }
   
     .sidebar-item figcaption {
@@ -299,12 +297,12 @@ h2 {
       justify-content: center;
     }
   
-    /* Tiles: lite mindre gap på tablet */
-    .tiles { align-items: stretch; }
-    .tiles > .col { display: flex; }
-    .tiles .card { display: flex; flex-direction: column; flex: 1 1 auto; }
-    .tiles .card-body { display: flex; flex-direction: column; }
-    .tiles .card-body .btn, .tiles .card-body a.btn { margin-top: auto; }
+   
+    .tiles { align-items: stretch; } /* Sträck ut alla barn till samma höjd */
+    .tiles > .col { display: flex; }/* Gör bootstrap kolumn till en flex container */
+    .tiles .card { display: flex; flex-direction: column; flex: 1 1 auto; } /* Kortet kan växa och krympa beroende på utrymme men utgår från sin naturliga storlek */
+    .tiles .card-body { display: flex; flex-direction: column; } /*Gör innehållet på kortet till ännu en flexbox för att kunna kontrollera hur rubrik, text, knapp förhåller sig till varandra*/
+    .tiles .card-body .btn, .tiles .card-body a.btn { margin-top: auto; } /*tryck ner knapp till botten*/
   }
   
 
@@ -329,7 +327,7 @@ h2 {
 
   .intro img {
     width: 100%;
-    height: 75vh; /* 75% av skärmen */
+    height: 65vh; /* 75% av skärmen */
     object-fit: cover;
     object-position: center 20%;
     border-radius: 10px;
@@ -350,7 +348,8 @@ h2 {
    =========================== */
 .om .layout {
   display: flex;
-  h2 {
+}
+  .om .layout h2 {
     text-align: center;
     margin: 10px;
     padding: 20px;
@@ -358,7 +357,7 @@ h2 {
     font-size: 50px;
     font-weight: normal;
   }
-}
+
 .about {
   text-align: center; /* centrera innehåll horisontellt */
   margin: 10%;
