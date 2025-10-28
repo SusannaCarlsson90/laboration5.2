@@ -244,8 +244,8 @@ h2 {
     }
   
     .intro img {
-      width: 100%;
-      height: 100%;
+      width: 105%;
+      height: 70%;
       min-height: 400px;        
       object-fit: cover;
       object-position: center 20%;
@@ -261,7 +261,8 @@ h2 {
       line-height: 1.5;
       padding: 0;           /* behåll luften via gap istället */
     }
-  
+
+  /*fick lägga in nedan rad efter många försök då tablet läget blev väldigt dåligt*/
     .intro-text h2 {
       font-size: clamp(22px, 3.2vw, 30px); /*gör textstorlekn responsiv utan media queries*/
       line-height: 1.2; 
