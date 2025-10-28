@@ -1,5 +1,5 @@
 /* BASLÄGE (Desktop) */
-
+/*Hur jag vill att intro tiles och sidebar ska ligga, mer utrymme för intro och tiles än sidebar*/
 .layout {
   display: grid;
   grid-template-areas:
@@ -37,11 +37,11 @@
   width: auto;
   margin-left: 20px;
   border-radius: 10px; /* rundade hörn om du vill */
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; /*liten effekt på loggan som är på 0.2s ease in out är hur animationen rör sig börjar långsamt, snabbare i mitten, långsamt i slutet*/
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /*när muspekaren förs över loggan ska bilden skalas upp till 105% av sin ursprungliga storlek*/
 }
 
 .navbar-brand {
@@ -138,7 +138,7 @@ footer { grid-area: footer; }
 
 .sidebar-item img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3 / 4; /*3 bred 4 hög som ett stående foto, lite högre än brett*/
   object-fit: cover;
   border-radius: 10px;
   display: block;

@@ -12,7 +12,7 @@
   <!-- Egna stilar -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Font -->
+  <!-- Font från google-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -26,13 +26,13 @@
     <nav class="navbar navbar-expand-md bg-body-tertiary">
       <div class="container-fluid">
     
-        <!-- Hamburgermenyn -->
+        <!-- Hamburgermenyn i mobilvy från bootstrap -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     
-        <!-- Menylänkarna -->
+        <!-- Menylänkarna i min navbar -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="index.html">Startsida</a>
@@ -42,13 +42,13 @@
             <a class="nav-link" href="kontakt.html">Kontakt</a>
           </div>
         </div>
-
+<!--Sök ruta från bootstrap-->
         <form class="d-flex me-3" role="search">
           <input class="form-control form-control-sm" type="search" placeholder="Sök..." aria-label="Sök">
           <button class="btn btn-outline-secondary btn-sm ms-2" type="submit">Sök</button>
         </form>
     
-        <!-- 🔹 Logga – flyttad längst till höger -->
+        <!-- 🔹 Logga – klassen är från bootstrap, loggan flyttad längst till höger tack vare ms-auto (margin start auto) -->
         <a href="index.html" class="navbar-brand ms-auto">
           <img src="images/flowerlogo.jpg" alt="Regnbågsbarn logga" class="logo">
         </a>
@@ -60,8 +60,9 @@
     <h1>Regnbågsbarn</h1>
   </header>
 
-  <!-- Main -->
+  <!-- Lägger in bootstrap klass i main för att få innehållet att sträcka sig 100% över sidan bredd, py4 ger padding vertikalt (inre marginal upp och ner). Lägger på klass main band för att kunna styra i css, ex bakgrundsfärg. -->
   <main class="container-fluid py-4 main-band">
+    <!--Lägger innehållet i en centrerad Bootstrap-container som begränsar maxbredden. Klassen pt-0 tar bort padding i mobilvy och pt-md-1 lägger till lite padding på större skärmar -->
     <div class="container layout pt-0 pt-md-1">
 
     <!-- Intro -->
@@ -70,12 +71,12 @@
 
       <div class="intro-text">
         <h2>Jag skapade Regnbågsbarn för att jag saknade det forumet</h2>
-        Välkommen till Regnbågsbarn! Denna plattform ville jag som grundare starta för alla föräldrar till regnbågsbarn
-        och människor som kämpar med, ofrivillig barnlöshet
+        <p>Välkommen till Regnbågsbarn! Denna plattform ville jag som grundare starta för alla föräldrar till regnbågsbarn
+        och människor som kämpar med ofrivillig barnlöshet</p>
         <p>Här kan du bland annat läsa historier om andra som kämpar och lyckliga historier om hur några till slut fått sina älskade barn.</p>
         <p>En plats för både sorg och glädje</p>
         <p>Följ våra bloggare, prata med vår läkare, barnmorska eller vår fertilitetes-AI skapad av Emma Hager för frågor kring fertilitet.</p>
-        <p>Här finns inga pekpinnar eller skuldbeläggande om att du ätit fel saker, här kan du bara andas.</p>
+        <p>Här finns inga pekpinnar eller skuldbeläggande om att du ätit fel saker, här kan du bara leta fram det du behöver just nu: diskutera din historia? Läsa historier om andras liknande resa, eller bara diskutera med AI? Välkommen!</p>
       </div>
     </section>
 
@@ -102,7 +103,7 @@
       </figure>
     </div>
 
-    <!-- Tiles / kort -->
+    <!-- Kort -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 tiles">
       <!-- Kort 1 -->
       <div class="col">
